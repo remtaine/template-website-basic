@@ -1,0 +1,270 @@
+:root {
+    --color-bg: #1F2937;
+    --color-bg2: #344052;
+    --color-text-main: #F9FAF8;
+    --color-text-secondary: #E5E7EB;
+    --color-text-logo: var(--color-text-main);
+    --color-button: #3882F6;
+    --color-info: #1F2937;
+    --color-quote-text: var(--color-info);
+    --color-quote-bg: var(--color-text-secondary);
+
+    --color1: #A7FF84;
+    --color2: #16B978;
+    --color3: white;
+    --color4: #071A52;
+    --color5: #086972;
+
+    --font-size-main: 48px;
+    --font-size-secondary: 18px;
+    --font-size-logo: 24px;
+    --font-size-info: 36px;
+    --font-size-quote: var(--font-size-info);
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--color2);
+    /* box-shadow: #1F2937; */
+    box-shadow: 11px 12px 14px  rgba(0,0,0,0.1);
+    z-index: 10;
+    position: relative;
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a {
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+    background-color: var(--color1);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.fa-brands {
+    transition: color 0.3s;
+    color: white;
+
+}
+
+.fa-github:hover {
+    color:#7A007A;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.fa-itch-io:hover {
+    color: #ED5757;
+}
+
+header a:visited {
+    color: inherit;
+}
+
+header {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    color: var(--color-text-main);
+    /* background-color:#1c5730; */
+
+    background: var(--color2);
+    background: linear-gradient(135deg, var(--color2) 37%, var(--color1) 90%);
+
+    /* background: rgb(69,157,99);
+    background: linear-gradient(239deg, rgba(69,157,99,1) 37%,
+    rgba(153,237,129,1) 90%);  */
+    
+    /* background: rgb(69,157,99);
+    background: linear-gradient(173deg, rgba(69,157,99,1) 40%, rgba(153,237,129,1) 100%);  */
+}
+
+header > * {
+    /* flex-grow: 1; */
+    flex-basis: 1;
+}
+header .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+header .text ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+header .text i {
+    font-size: 3rem;
+}
+
+header img {
+    flex-shrink: 0;
+    max-width: 50%;
+    box-shadow: ;
+}
+
+header h1, header p {
+    margin: 0;
+}
+
+h2, #about p {
+    margin: 0;
+    margin-left: 30px;
+    padding-top: 20px;
+
+}
+
+blockquote {
+    font-style: italic;
+    text-align: center;
+}
+
+.image-bg {
+    min-height: 90vh;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.image-bg.img1 {
+    background-image: url("/images/laptop1.jpg");
+    backdrop-filter: blur(8px);
+    /* --webkit-backdrop-filter: blur(8px); */
+}
+
+.image-bg.img1::after {
+    /* filter: brightness(100%); */
+}
+
+.image-bg.img2 {
+    background-image: url("/images/laptop2.jpg");
+}
+
+.image-bg.img3 {
+    background-image: url("/images/laptop3.jpg");
+}
+
+main {
+    background-color: var(--color2);
+    /* padding: 10px 0; */
+}
+
+main .list {
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    gap: 30px;
+    margin: 30px;
+}
+
+main .list img {
+    width: 100%;
+}
+
+main .list p {
+    text-align: justify;
+    text-justify: inter-word;
+    /* hyphens: auto; */
+}
+
+#skills .list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#skills .list > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+#skills .list i {
+    font-size: 5rem;
+}
+
+h3 {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+form {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    background-color: var(--color2);
+}
+
+fieldset h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+fieldset .list {
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 40vh;
+    /* margin: auto; */
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--color2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+footer a {
+    padding: 0 5px;
+    text-decoration: none;
+    color: var(--color-text-main);
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
